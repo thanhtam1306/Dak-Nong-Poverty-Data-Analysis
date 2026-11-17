@@ -57,7 +57,7 @@ PowerBI Sync Source + Dashboard
 - Tạo bộ dữ liệu cấp hộ phục vụ phân tích, phân cụm và mô hình dự đoán.
 - Xây dựng các phân tích theo địa bàn, dân tộc, độ tuổi, lao động và nhóm phụ thuộc.
 - Phân cụm hộ dân bằng K-Means để nhận diện các nhóm hộ có đặc điểm tương đồng.
-- Huấn luyện và so sánh mô hình Random Forest, XGBoost cho bài toán dự đoán tình trạng hộ.
+- Huấn luyện và so sánh mô hình Random Forest, XGBoost nhằm đánh giá mức độ phân tách cụm (Cluster Separability) và phân tích tầm quan trọng của các biến đặc trưng (Feature Importance) đối với các nhóm hộ dân.
 - Tạo file `PowerBI_Sync_Source.xlsx` để đồng bộ dữ liệu cho dashboard PowerBI.
 
 ## 5. Dashboard và hình ảnh kết quả
@@ -110,7 +110,7 @@ Thư viện Python cần thiết được liệt kê trong file `requirements.tx
 ## 7. Cấu trúc thư mục
 
 ```text
-NguyenHoangThanhTam/
+Dak-Nong-Poverty-Data-Analysis/
 |
 |-- data/
 |   |-- raw/                  # Dữ liệu Excel gốc theo huyện
@@ -119,6 +119,8 @@ NguyenHoangThanhTam/
 |   |-- feature_audit/        # Kết quả kiểm tra chất lượng feature
 |   |-- model/                # Feature, clustering, diagnostic, predictive outputs
 |   |-- review/               # File kiểm tra chất lượng dữ liệu
+|
+|-- Dữ liệu đã chuẩn hóa/     # Thư mục dữ liệu chuẩn hóa đối soát
 |
 |-- notebooks/
 |   |-- data_understanding.ipynb
@@ -131,6 +133,7 @@ NguyenHoangThanhTam/
 |   |-- diagnostic_analysis.ipynb
 |   |-- predictive_analysis.ipynb
 |   |-- policy_area_validation.ipynb
+|   |-- note.ipynb
 |
 |-- output/
 |   |-- image/
@@ -139,9 +142,11 @@ NguyenHoangThanhTam/
 |   |   |-- sync_sources/
 |   |   |   |-- PowerBI_Sync_Source.xlsx
 |
-|-- 3122410371-Nguyễn Hoàng Thanh Tâm-Báo cáo thực tập tốt nghiệp.pdf
-|-- Nguyen Hoang Thanh Tam_BaoCao.pptx
-|-- note.ipynb
+|-- reports/                  # Báo cáo thực tập, slide thuyết trình & tài liệu nghiệm thu
+|   |-- Nguyen Hoang Thanh Tam_BaoCao.pptx
+|   |-- Nguyễn Hoàng Thanh Tâm - Data Analyst - TEAM15.docx
+|   |-- Nguyễn Hoàng Thanh Tâm - Data Analyst - TEAM15.pdf
+|
 |-- README.md
 |-- requirements.txt
 ```
